@@ -13,3 +13,12 @@ module.exports.campgroundSchema = Joi.object({
 
     }).required()
 }) //different from mongoose schema as it validates the data before even initiating mongoose
+
+module.exports.reviewSchema = new Joi.object({
+    review: Joi.object({
+        rating: Joi.number().required().min(1).max(5),
+        body: Joi.string().required()
+    }).required()
+
+})
+
