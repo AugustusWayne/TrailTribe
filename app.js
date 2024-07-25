@@ -63,6 +63,7 @@ passport.deserializeUser(User.deserializeUser())// tells passport how to unstore
 
 
 app.use((req, res, next) => {
+    res.locals.currentUser = req.user;
     res.locals.success = req.flash('success')
     res.locals.error = req.flash('error')
     next();
