@@ -24,7 +24,7 @@ const sample = (array) => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
     await Campground.deleteMany({})
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 300; i++) {
         const random = Math.floor(Math.random() * 100) + 1;
         const price = Math.floor(Math.random() * 100) + 1
         const camp = new Campground({
@@ -35,7 +35,13 @@ const seedDB = async () => {
             //image: `https://picsum.photos/400?random=${Math.random()}`,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nostrum quibusdam eius atque accusantium in dignissimos. Iusto, hic enim sequi quae consequuntur harum aut nobis labore nemo provident. Fuga, similique?',
             price,
-            geometry: { type: 'Point', coordinates: [ 72.975662, 19.187882 ] },
+            geometry: {
+                type: 'Point',
+                coordinates: [
+                    cities[random].lng,
+                    cities[random].lat
+                ]
+            },
             images: [
                 {
                     url: 'https://res.cloudinary.com/dtczgrboc/image/upload/v1722022747/TrailTribe/cg8l3yfczhrk6ukkcss3.png',
