@@ -5,9 +5,12 @@
                 <h4 class="alert-heading">
                     <%= err.message %>
                 </h4>
+                <% if (process.env.NODE_ENV !== 'production') { %>
+                  <!-- // if I am in development mode, the contents of the env file are added to my node environment and accesssible across all files under 'process.env' -->
                 <p>
                     <%= err.stack %>
                 </p>
+                <% } %>
             </div>
         </div>
     </div>
