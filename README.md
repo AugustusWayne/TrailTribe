@@ -7,6 +7,8 @@ TrailTribe is a platform for campers around the world to connect and find campgr
 - **Global Connection:** Connect with campers from around the world.
 - **Campground Finder:** Search for campgrounds based on location, amenities, and reviews.
 - **User Profiles:** Create a profile to share your camping experiences and tips.
+- **Ratings:** Rate and review other campggrounds
+- **Map:** Search up campgrounds nearby by using an interactive map
 
 ## Technologies Used
 
